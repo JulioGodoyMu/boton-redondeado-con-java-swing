@@ -21,7 +21,8 @@ public class BotonRedondo extends JPanel implements MouseListener{
     private int r;
     private JLabel texto;
     private Boton botonInterface;
-    private Container contenedor;
+   // private Container contenedor;
+    //private BotonRedondo instancia;
     
 	BotonRedondo(){
 	color=Color.LIGHT_GRAY;
@@ -61,8 +62,8 @@ public class BotonRedondo extends JPanel implements MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-	
-		botonInterface.addBotonEscuchador();
+     	
+		botonInterface.addBotonEscuchador(this);
 		
 		
 	}
@@ -95,8 +96,10 @@ public class BotonRedondo extends JPanel implements MouseListener{
 	}
 
 	public void addBotonEscucha(Container contenedor){
-		this.contenedor=contenedor;
+		//this.contenedor=contenedor;
+		//System.out.println(contenedor.getName());
 		if(contenedor instanceof Boton) {
+		
 			botonInterface=(Boton) contenedor;
 		}
 	}

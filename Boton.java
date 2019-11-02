@@ -5,5 +5,5 @@ import java.awt.Container;
 
 public interface Boton {
  	
-	public abstract void addBotonEscuchador();
+	public abstract void addBotonEscuchador(BotonRedondo boton);
 }
